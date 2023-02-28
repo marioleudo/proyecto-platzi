@@ -2,7 +2,7 @@ const navEmail = document.querySelector(".navbar-email");
 const menudesktop = document.querySelector(".desktop-menu");
 const menuHamIcon = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
-const aside = document.querySelector(".product-detail");
+const shoppingCartContainer = document.getElementById("shoppingCartContainer");
 const carritoAside = document.querySelector(".navbar-shopping-cart");
 const cartContainer = document.querySelector(".cards-container");
 
@@ -15,10 +15,10 @@ function togglemenudesktop() {
 }
 
 function togglemobileMenu() {
-  const asideClose = aside.classList.contains("inactive");
+  const asideClose = shoppingCartContainer.classList.contains("inactive");
 
   if (!asideClose) {
-    aside.classList.add("inactive");
+    shoppingCartContainer.classList.add("inactive");
   }
 
   mobileMenu.classList.toggle("inactive");
@@ -30,7 +30,7 @@ function toggleCarritoAside() {
     mobileMenu.classList.add("inactive");
   }
 
-  aside.classList.toggle("inactive");
+  shoppingCartContainer.classList.toggle("inactive");
 }
 
 const productList = [];
